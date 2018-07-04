@@ -3,8 +3,6 @@ import sys
 
 
 def gcd_new(a, b):
-    if b == 0:
-        return a
     a_prime = a % b
     return gcd_new(b, a_prime)
 
