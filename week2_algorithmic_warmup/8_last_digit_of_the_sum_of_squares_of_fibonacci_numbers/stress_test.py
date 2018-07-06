@@ -3,7 +3,7 @@ from fibonacci_sum_squares import fibonacci_sum_squares_naive
 import random
 
 while True:
-    n = random.randint(0, 100000)
+    n = random.randint(0, 10000)
     nv = fibonacci_sum_squares_naive(n)
     fst = squ_fast(n)
     print(n, '\t')
