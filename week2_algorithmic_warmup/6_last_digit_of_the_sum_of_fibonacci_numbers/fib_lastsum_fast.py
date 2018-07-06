@@ -11,9 +11,10 @@ def fib_fast(n):
 
     prev, curr = 0, 1
 
-    for _ in range(n - 1):
+    for i in range(n - 1):
+        print(i)
         prev, curr = curr % 10, (prev % 10 + curr % 10) % 10
-        # print(prev, curr, '\n')
+        print(prev, curr, '\n')
 
     if curr == 0:
         return 9
@@ -21,6 +22,6 @@ def fib_fast(n):
 
 
 if __name__ == '__main__':
-    input = sys.stdin.read()
-    n = int(input)
-    print(fib_fast(n))
+    # input = sys.stdin.read()
+    # n = int(input)
+    print(fib_fast(6))
