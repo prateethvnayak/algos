@@ -7,6 +7,23 @@ def get_majority_element(a, left, right):
     if left + 1 == right:
         return a[left]
     #write your code here
+    left_ele = get_majority_element(a,left,(left+right-1) // 2 + 1)
+    right_ele = get_majority_element(a,(left + right - 1) // 2 + 1,right)
+    
+    lcount = 0
+    for i in range(left,right):
+        if a[i] == left_ele:
+            lcount+= 1
+    if lcount > (right - left) // 2 :
+        return left_ele
+
+    rcount = 0
+    for i in range(left, right):
+        if a[i] == right_ele:
+            rcount += 1
+    if rcount > (right - left) // 2:
+        return right_ele
+
     return -1
 
 if __name__ == '__main__':
